@@ -104,7 +104,11 @@ void verifyConstraints(SetupCtx& setupCtx, StepsParams &params, ConstraintInfo *
     ExpressionsPack expressionsCtx(setupCtx);
 #endif
 
+    cout << "HOLA " << endl;
+
     expressionsCtx.calculateExpressions(params, setupCtx.expressionsBin.expressionsBinArgsConstraints, dests, uint64_t(1 << setupCtx.starkInfo.starkStruct.nBits), false);
+
+    cout << "HOLA " << endl;
 
 #pragma omp parallel for
     for (uint64_t i = 0; i < setupCtx.expressionsBin.constraintsInfoDebug.size(); i++) {
